@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      padding: 0;
+
+}
+
+img {
+      max-width: 100%;
+      gap: 1rem;
+}
+
+p {
+      line-height: 1.5;
+	color: hsl(236, 13%, 42%);
+}
+
+html {
+      font-size: 15px;
+}
+
+body {
+	max-width: 1200px;
+	margin: auto;
+	padding-bottom: 4rem;
+}
+
+.header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+	padding: 1.25rem;
+}
+
+.header nav #menu-close {
+	background: transparent;
+	border: none;
+	outline: none;
+	position: absolute;
+	right: 1.25rem;
+	top: 1.25rem;
+	z-index: 99999;
+	cursor: pointer;
+}
+
+.header nav {
+	opacity: 0;
+	z-index: -999;
+	transition: all 0.3s ease-in-out;
+}
+
+.header nav.open {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 70vw;
+	background-color: white;
+	padding: 1.25rem;
+	opacity: 1;
+	z-index: 9999999;
+}
+
+.header nav ul {
+	position: absolute;
+	top: 45%;
+	transform: translateY(-50%);
+}
+
+.margin nav ul li {
+	margin-right: 1.5rem;
+	font-size: 16px;
+}
+
+.header .menu-button button {
+	background: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.showcase {
+	padding: 0 2rem 1rem 0;
+	margin: 0 1rem;
+}
+
+.showcase h1 {
+      font-size: 3rem;
+	font-weight: 900;
+      color: hsl(240, 100%, 5%);
+      margin: 1rem 0 2rem 0;
+}
+
+.showcase div:first-child article p {
+      margin: 2rem 3.25rem 1rem 0;
+	padding-top: 0;
+}
+
+.showcase div:first-child article button {
+      background-color: hsl(5, 85%, 63%);
+      color: #fff;
+      padding: 0.7rem 2.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+	transition: all 0.4s ease-in-out;
+}
+
+.showcase div:first-child article button:hover {
+	background-color: hsl(240, 100%, 5%);
+	cursor: pointer;
+}
+
+
+ul {
+      list-style-type: none;
+	margin: 1.25rem 1.25rem;
+
+}
+
+ul > li:hover {
+	color:hsl(35, 77%, 62%);
+	cursor: pointer;
+}
+
+nav li {
+	display: flex;
+	margin-right: 1.25rem;
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: hsl(240, 100%, 5%);
+	transition: all 0.1s ease-in-out;
+	
+}
+
+.showcase > div:last-child {
+      background-color: hsl(240, 100%, 5%);
+      padding: 2.25rem;
+	margin-right: 1.25rem;
+}
+
+.showcase > div:last-child h2 {
+      color: hsl(35, 77%, 62%);
+      margin-bottom: 1.25rem;
+      font-size: 2.5rem;
+}
+
+.showcase > div:last-child article {
+	padding: 1.25rem 1.25rem 0 0;
+}
+
+.showcase > div:last-child article:not(:last-child) {
+      border-bottom: 2px solid hsl(236, 13%, 42%);
+
+}
+
+.showcase > div:last-child h3 {
+      color: #fff;
+      margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.showcase > div:last-child h3:hover {
+      color: hsl(35, 77%, 62%);
+      cursor: pointer;
+} 
+
+.cards article {
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 gap: 1.25rem; 
+	 margin-left:1rem;
+}
+
+.card article img {
+	width: 50%;
+}
+
+.cards article span {
+	color:hsl(236, 13%, 42%);
+	font-weight: bold;
+	font-size: 2rem;
+	opacity: 75%;
+}
+
+.cards article h4 {
+	font-size: 1.5rem;
+	color: hsl(240, 100%, 5%);
+	margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+	.cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	margin-left: 1.1rem;
+}	
+}
+
+@media (min-width: 1024px) {
+	.header {
+	padding: 2rem 1.25rem;
+}
+
+	.header nav {
+	opacity: 1;
+	z-index: auto;
+	width: 100%;
+}
+
+	.header nav.open {
+	position: relative;
+	width: auto;
+	background-color: transparent;
+	padding: 0;
+	z-index: auto;
+}
+
+	.header nav #menu-close {
+	display: none;
+
+}
+
+	.header nav ul {
+	position: relative;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 2rem;
+	transform: translateY(0%);
+}
+
+	.header nav ul li {
+		margin: 0;
+}
+
+	.header .menu-button button {
+	display: none;
+}
+	.showcase {
+	display: flex;
+	gap: 1.25rem;
+}
+	.showcase h1 {
+	font-size: 3rem;
+	font-weight: 900;
+}
+	.showcase > div:first-child article {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	place-items: center;
+	margin: 0 2rem 0 0;
+}
+	.showcase > div:last-child {
+	margin-top: 0;
+	width: 90vh;
+ }
+
+	.cards {
+	grid-template-columns: repeat(3, 1fr);
+	padding-top: 1.5rem;
+	margin: 1.25rem;
+}
+}
+
+.attribution { 
+	font-size: 12px;
+	text-align: center;
+	margin-top: 5rem;
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
