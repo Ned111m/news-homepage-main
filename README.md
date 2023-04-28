@@ -5,7 +5,7 @@ This is a solution to the News Homepage challenge on Frontend Mentor. It is a re
 ## Links
 
 - Code URL: [https://github.com/Ned111m/news-homepage.git]
-- Live Site URL: [https://news-homepage.netlify.app/]
+- Live Site URL: [https://ned1m-news-homepage.netlify.app/]
 
 ## Built with
 
